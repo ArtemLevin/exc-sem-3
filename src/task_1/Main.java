@@ -1,19 +1,24 @@
 package task_1;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
+//
+//Задача 1: Проверка пароля (Основы языка Java, операторы, ветвления)
+//
+//        Создайте класс PasswordVerifier. Этот класс должен содержать метод, который принимает строку пароля и проверяет его на соответствие следующим правилам:
+//
+//        Пароль должен быть не менее 8 символов.
+//        Пароль должен содержать хотя бы одну цифру.
+//        Пароль должен содержать хотя бы одну заглавную букву.
+//        Метод должен выбрасывать исключение, если пароль не соответствует какому-либо из этих правил.
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) throws InvalidPasswordException {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your password: ");
+        String password = input.next();
+        System.out.println("Your password: " + password);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        PasswordVerifier passwordVerifier = new PasswordVerifier(password);
+        passwordVerifier.Verifier(password);
         }
     }
-}

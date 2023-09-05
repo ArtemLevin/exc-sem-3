@@ -13,7 +13,7 @@ public class PasswordVerifier {
                 throw new InvalidPasswordException("Password length is less than 8 symbols");
             }
         } catch (InvalidPasswordException e1) {
-            System.out.println("Entered incorrect number");
+            System.out.println("Password length is less than 8 symbols");
 
             int counter = 0;
             for (char c : this.password.toCharArray())
@@ -26,7 +26,7 @@ public class PasswordVerifier {
                     throw new InvalidPasswordException("There is no any digit in the password");
                 }
             } catch (InvalidPasswordException e2) {
-                System.out.println("Entered incorrect number");
+                System.out.println("There is no any digit in the password");
             }
 
             int counterUpper = 0;
